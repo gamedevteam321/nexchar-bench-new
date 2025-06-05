@@ -1,0 +1,178 @@
+#nexchat-floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color, #007bff);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 999;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#nexchat-floating-button:hover {
+    background-color: var(--primary-dark-color, #0056b3);
+    transform: scale(1.1);
+}
+
+#nexchat-window {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    max-width: 90vw;
+    height: 500px;
+    max-height: 70vh;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+}
+
+#nexchat-window.open {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.nexchat-header {
+    background-color: var(--primary-color, #007bff);
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.nexchat-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#nexchat-messages {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.nexchat-message {
+    padding: 8px 12px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 0.9rem;
+}
+
+.nexchat-message.user {
+    background-color: var(--primary-color-light, #d1e7ff);
+    color: var(--primary-color-dark, #004085);
+    align-self: flex-end;
+    border-bottom-right-radius: 5px;
+}
+
+.nexchat-message.bot {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.nexchat-message .timestamp {
+    font-size: 0.7rem;
+    color: #777;
+    display: block;
+    margin-top: 3px;
+    text-align: right;
+}
+
+.nexchat-message.bot .timestamp {
+    text-align: left;
+}
+
+.nexchat-input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+#nexchat-message-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+#nexchat-send-button {
+    background-color: var(--primary-color, #007bff);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+#nexchat-send-button:hover {
+    background-color: var(--primary-dark-color, #0056b3);
+}
+
+#nexchat-loading-indicator {
+    padding: 5px 15px;
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+}
+
+#nexchat-error-message {
+    padding: 5px 15px;
+    font-size: 0.8em;
+    color: var(--error-color, red);
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #nexchat-window {
+        width: 90vw;
+        height: 60vh;
+        bottom: 70px;
+        right: 5vw;
+    }
+    #nexchat-floating-button {
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        line-height: 50px;
+    }
+} 

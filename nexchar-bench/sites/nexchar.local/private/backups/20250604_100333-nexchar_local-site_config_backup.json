@@ -1,0 +1,15 @@
+{
+ "db_name": "_6c8a96326ab68a59",
+ "db_password": "P8pZIGkcGybNvZwo",
+ "db_type": "mariadb",
+ "encryption_key": "Ll8zrmGYX66DzfvF9CzBx1C0YCQL8g_RAOVX92CxZHE=",
+ "installed_apps": [
+  "frappe",
+  "erpnext",
+  "hrms",
+  "custom_attendance"
+ ],
+ "user_type_doctype_limit": {
+  "employee_self_service": 40
+ }
+}

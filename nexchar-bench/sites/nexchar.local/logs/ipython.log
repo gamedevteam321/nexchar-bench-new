@@ -1,0 +1,65 @@
+2025-06-03 14:36:37,448 INFO ipython === bench console session ===
+2025-06-03 14:36:37,449 INFO ipython import frappe; print(frappe.get_all('Workspace', fields=['name']))
+2025-06-03 14:36:37,449 INFO ipython === session end ===
+2025-06-03 16:11:50,604 INFO ipython === bench console session ===
+2025-06-03 16:11:50,606 INFO ipython exit;
+2025-06-03 16:11:50,606 INFO ipython === session end ===
+2025-06-03 17:14:14,312 INFO ipython === bench console session ===
+2025-06-03 17:14:14,313 INFO ipython frappe.db.sql("DELETE FROM `tabInstalled Application` WHERE app_name='chatbot_widget'")
+frappe.db.commit()
+exit()
+2025-06-03 17:14:14,313 INFO ipython === session end ===
+2025-06-03 17:29:53,335 INFO ipython === bench console session ===
+2025-06-03 17:29:53,336 INFO ipython    frappe.db.sql("DELETE FROM `tabInstalled Application` WHERE app_name='chatbot_widget'")
+   frappe.db.commit()
+   exit()
+2025-06-03 17:29:53,336 INFO ipython === session end ===
+2025-06-03 17:30:20,163 INFO ipython === bench console session ===
+2025-06-03 17:30:20,163 INFO ipython    frappe.db.sql("DELETE FROM `tabInstalled Application` WHERE app_name='chatbot_widget'")
+   frappe.db.commit()
+   exit()
+2025-06-03 17:30:20,163 INFO ipython === session end ===
+2025-06-03 17:31:56,304 INFO ipython === bench console session ===
+2025-06-03 17:31:56,306 INFO ipython print([x[0] for x in frappe.db.sql("select app_name from `tabInstalled Application`")])
+2025-06-03 17:31:56,306 INFO ipython frappe.db.sql("DELETE FROM `tabInstalled Application` WHERE app_name='chatbot_widget'")
+frappe.db.commit()
+exit()
+2025-06-03 17:31:56,306 INFO ipython === session end ===
+2025-06-03 17:38:55,775 INFO ipython === bench console session ===
+2025-06-03 17:38:55,776 INFO ipython exit;
+2025-06-03 17:38:55,776 INFO ipython === session end ===
+2025-06-03 17:40:48,356 INFO ipython === bench console session ===
+2025-06-03 17:40:48,358 INFO ipython print(frappe.db.sql("SELECT * FROM `tabModule Def` WHERE module_name='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabDocType` WHERE module='chatbot_widget'"))
+2025-06-03 17:40:48,358 INFO ipython frappe.db.sql("DELETE FROM `tabModule Def` WHERE module_name='chatbot_widget'")
+frappe.db.commit()
+2025-06-03 17:40:48,358 INFO ipython exit;
+2025-06-03 17:40:48,358 INFO ipython === session end ===
+2025-06-03 17:42:15,143 INFO ipython === bench console session ===
+2025-06-03 17:42:15,144 INFO ipython print(frappe.db.sql("SELECT * FROM `tabModule Def` WHERE module_name='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabDocType` WHERE module='chatbot_widget'"))
+2025-06-03 17:42:15,145 INFO ipython frappe.db.sql("DELETE FROM `tabModule Def` WHERE module_name='chatbot_widget'")
+frappe.db.sql("DELETE FROM `tabDocType` WHERE module='chatbot_widget'")
+frappe.db.commit()
+2025-06-03 17:42:15,145 INFO ipython exit;
+2025-06-03 17:42:15,145 INFO ipython === session end ===
+2025-06-03 17:45:38,136 INFO ipython === bench console session ===
+2025-06-03 17:45:38,137 INFO ipython print(frappe.db.sql("SELECT * FROM `tabModule Def` WHERE module_name='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabDocType` WHERE module='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabPage` WHERE module='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabWebsite Route` WHERE module='chatbot_widget'"))
+2025-06-03 17:45:38,138 INFO ipython print(frappe.db.sql("SELECT * FROM `tabModule Def` WHERE module_name='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabDocType` WHERE module='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabPage` WHERE module='chatbot_widget'"))
+2025-06-03 17:45:38,138 INFO ipython exit;
+2025-06-03 17:45:38,138 INFO ipython === session end ===
+2025-06-03 17:46:24,190 INFO ipython === bench console session ===
+2025-06-03 17:46:24,191 INFO ipython print(frappe.db.sql("SELECT * FROM `tabModule Def` WHERE module_name='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabDocType` WHERE module='chatbot_widget'"))
+print(frappe.db.sql("SELECT * FROM `tabPage` WHERE module='chatbot_widget'"))
+2025-06-03 17:46:24,191 INFO ipython frappe.db.sql("DELETE FROM `tabModule Def` WHERE module_name='chatbot_widget'")
+frappe.db.sql("DELETE FROM `tabDocType` WHERE module='chatbot_widget'")
+frappe.db.sql("DELETE FROM `tabPage` WHERE module='chatbot_widget'")
+frappe.db.commit()
+2025-06-03 17:46:24,191 INFO ipython exit;
+2025-06-03 17:46:24,191 INFO ipython === session end ===

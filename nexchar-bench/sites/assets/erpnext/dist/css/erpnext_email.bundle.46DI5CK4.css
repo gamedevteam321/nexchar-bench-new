@@ -1,0 +1,28 @@
+/* ../../../../../../var/folders/ms/4lgzpnpx45n1y58bv3n5b8gr0000gp/T/tmp-46455-qgXzacp4hnqD/erpnext/erpnext/public/scss/erpnext_email.bundle.css */
+.panel-header {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px 3px 0 0;
+}
+.panel-body {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-top: none;
+  border-radius: 0 0 3px 3px;
+  overflow-wrap: break-word;
+}
+.sender-avatar,
+.sender-avatar-placeholder {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+.sender-avatar-placeholder {
+  line-height: 24px;
+  text-align: center;
+  color: var(--border-color);
+  border: 1px solid var(--border-color);
+  background-color: white;
+}
+/*# sourceMappingURL=erpnext_email.bundle.46DI5CK4.css.map */

@@ -1,0 +1,11 @@
+{
+    "service_account": {
+        "api_key": "fc6775c0647800f",
+        "api_secret": "bbfd5613e5a21d2"
+    },
+    "erp_url": "http://nexchar.local:8000",
+    "camera_id": 0,
+    "face_detection_confidence": 0.6,
+    "check_interval_seconds": 5,
+    "service_user_email": "face.attendance@nexchar.com"
+} 

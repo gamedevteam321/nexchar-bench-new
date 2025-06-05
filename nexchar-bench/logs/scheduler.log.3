@@ -1,0 +1,1155 @@
+2025-06-02 23:19:25,502 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:20:25,756 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:21:25,846 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:22:25,942 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:23:25,955 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:24:26,056 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:26:18,964 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:28:14,368 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:29:14,587 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:30:14,702 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:31:14,723 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:32:14,898 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:33:14,985 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:34:39,479 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:36:40,223 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:37:40,374 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:39:24,954 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:40:24,977 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:41:25,093 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:45:08,359 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:46:08,516 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:47:08,605 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:48:08,878 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:49:08,976 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:50:09,080 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:51:09,187 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:52:09,192 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:53:09,339 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:54:09,353 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:55:09,495 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:56:09,509 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:57:09,679 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")
+2025-06-02 23:58:09,756 ERROR scheduler Exception in Enqueue Events for Site nexchar2.local
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 99, in enqueue_events_for_site
+    if is_scheduler_inactive():
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 143, in is_scheduler_inactive
+    if is_scheduler_disabled(verbose=verbose):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/scheduler.py", line 156, in is_scheduler_disabled
+    frappe.db.get_single_value("System Settings", "enable_scheduler")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 837, in get_single_value
+    ).run()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/query_builder/utils.py", line 87, in execute_query
+    result = frappe.db.sql(query, params, *args, **kwargs)  # nosemgrep
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 207, in sql
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/database.py", line 112, in connect
+    self._conn: "MariadbConnection" | "PostgresConnection" = self.get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 108, in get_connection
+    conn = self._get_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 114, in _get_connection
+    return self.create_connection()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/database/mariadb/database.py", line 117, in create_connection
+    return pymysql.connect(**self.get_connection_settings())
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 361, in __init__
+    self.connect()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 669, in connect
+    self._request_authentication()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 957, in _request_authentication
+    auth_packet = self._read_packet()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/env/lib/python3.10/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.OperationalError: (1045, "Access denied for user '_a3ff15671ac7bbb4'@'localhost' (using password: YES)")

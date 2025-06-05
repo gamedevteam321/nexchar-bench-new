@@ -1,0 +1,251 @@
+2025-06-04 10:09:52,374 ERROR frappe Failed to run after request hook
+Site: nexchar.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 184, in init_request
+    raise frappe.SessionStopped("Session Stopped")
+frappe.exceptions.SessionStopped: Session Stopped
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1609, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 101, in get_value
+    val = generator()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.17_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'nexchar_chat.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1609, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 101, in get_value
+    val = generator()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.17_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'nexchar_chat.hooks'
+2025-06-04 10:13:23,723 ERROR frappe Failed to run after request hook
+Site: nexchar.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 184, in init_request
+    raise frappe.SessionStopped("Session Stopped")
+frappe.exceptions.SessionStopped: Session Stopped
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 325, in handle_exception
+    allow_traceback = frappe.get_system_settings("allow_error_traceback") if frappe.db else False
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 2328, in get_system_settings
+    local.system_settings = system_settings = get_cached_doc("System Settings")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1179, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1305, in get_doc
+    return frappe.model.document.get_doc(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/base_document.py", line 67, in get_controller
+    return import_controller(doctype)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/model/base_document.py", line 89, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1609, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 101, in get_value
+    val = generator()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.17_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'nexchar_chat.hooks'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1609, in get_hooks
+    hooks = _dict(cache.get_value("app_hooks", _load_app_hooks))
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 101, in get_value
+    val = generator()
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1576, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/Users/shobhit/Nexchar-bench/nexchar-bench/apps/frappe/frappe/__init__.py", line 1442, in get_module
+    return importlib.import_module(modulename)
+  File "/opt/homebrew/Cellar/python@3.10/3.10.17_1/Frameworks/Python.framework/Versions/3.10/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1004, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'nexchar_chat.hooks'
+2025-06-04 10:16:50,116 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:50,272 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:53,117 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:53,205 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:54,182 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:54,272 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:55,572 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:55,659 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:58,493 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:58,581 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,285 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,373 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,458 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,544 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,646 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,732 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,818 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,909 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:16:59,984 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:00,071 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:00,143 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:00,239 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:00,310 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:00,395 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:03,592 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 10:17:03,680 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {}
+2025-06-04 17:52:37,467 ERROR frappe New Exception collected in error log
+Site: nexchar.local
+Form Dict: {'app_path': 'home'}
